@@ -19,7 +19,7 @@ firebase.initializeApp(firebaseConfig)
  messaging.getToken({ vapidKey: 'BBpFfyoja5WnPrqAEZ_qUqm1MsykgcIk4Zh-fQG5fihvSijSxG1fdnlRrQgkWJRO8jcLtR4kandUfxtU_vJJTSI' }).then((currentToken) => {
   if (currentToken) {
     console.log(currentToken)
-    subscribeTokenToTopic(currentToken, 'd4b1658f-3271-4973-8591-98a82939a664');
+    subscribeTokenToTopic(currentToken, 'd4b1658f-3271-4973-8591-98a82939a664s');
 
   } else {
     console.log('No registration token available. Request permission to generate one.');
