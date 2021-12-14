@@ -15,8 +15,8 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig)
 firebase.messaging()
 const messaging  = firebase.messaging()
-messaging.onBackgroundMessage(() => {
-    console.log("tesing sevice worker")
+messaging.onBackgroundMessage((e) => {
+    console.log("tesing sevice worker", e)
     // Customize notification here
     const notificationTitle = 'vue-cometchat-firebase';
     const notificationOptions = {

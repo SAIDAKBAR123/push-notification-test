@@ -52,7 +52,7 @@ messaging.onMessage(function(payload) {
       var notificationTitle = 'vue-cometchat-firebase';
     var notificationOptions = {
       body: payload.data.message,
-      icon: 'https://cdn2.iconfinder.com/data/icons/avatars-2-7/128/42-512.png',
+      icon: '',
     };
   
     var notification = new Notification(notificationTitle, notificationOptions);
