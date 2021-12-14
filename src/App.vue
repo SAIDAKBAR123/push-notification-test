@@ -41,17 +41,6 @@ export default {
         })
       }
     }
-      // if (Notification.permission == 'granted') {
-      //     let notification = new Notification('This is just test', {
-      //       image: 'https://lh3.googleusercontent.com/proxy/OlPbCnEN1F_IB4-NdJVEyGnu6HtKi4G4MOsYq0-K0fqgcMR5xw7sOqJzxUWW596KDZxTyTRL-JJyUS5O-z7OPgnivyUGHrIwCEc9uWjQpITMR74',
-      //       data: 'this is also go',
-      //       title: 'Gogogog'
-      //     })
-      //     notification.onclick = function(event) {
-      //       event.preventDefault(); // prevent the browser from focusing the Notification's tab
-      //       window.open('http://www.mozilla.org', '_blank');
-      //     }
-      // }
     }
 }
 
