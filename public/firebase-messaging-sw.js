@@ -16,12 +16,9 @@ const messaging  = firebase.messaging()
 messaging.onBackgroundMessage((e) => {
     console.log("testing sevice worker", e)
     // Customize notification here
-    const notificationTitle = 'vue-cometchat-firebase';
-    const notificationOptions = {
-      body: 'Background Message body.',
-    //   icon: '/firebase-logo.png'
-    };
-  
-    self.registration.showNotification(notificationTitle,
-      notificationOptions);
+    self.registration.showNotification(e.data.username,
+      {
+        body: e.data.message,
+        icon: 'https://static.toiimg.com/photo/msid-71581763/71581763.jpg?259859'
+      });
   });

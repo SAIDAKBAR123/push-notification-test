@@ -15,8 +15,8 @@ var firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig)
  const messaging = firebase.messaging()
-    
-messaging.getToken({ vapidKey: 'BBquQQmEpLBfdqpyYUtxbTYRi2BhvXv3RElkngZGoWpZTjBhpijKJqPt5TPumD-eKwWkIt2JDs2LAIvHhm8u8do' }).then((currentToken) => {
+
+ messaging.getToken({ vapidKey: 'BBquQQmEpLBfdqpyYUtxbTYRi2BhvXv3RElkngZGoWpZTjBhpijKJqPt5TPumD-eKwWkIt2JDs2LAIvHhm8u8do' }).then((currentToken) => {
   if (currentToken) {
     console.log(currentToken)
   } else {
@@ -36,7 +36,7 @@ messaging.onMessage(function(payload) {
       body: payload.data.message,
       icon: '',
     };
-  
+
     var notification = new Notification(notificationTitle, notificationOptions);
     notification.onclick = function(event) {
       notification.close();
