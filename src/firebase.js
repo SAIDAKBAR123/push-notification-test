@@ -1,21 +1,3 @@
-// const firebaseApps = {
-//   apiKey: "AIzaSyCx5Hw53Af-_uVHhMdv9D4tEeAGzSbuSMg",
-//   authDomain: "elite-ceremony-300706.firebaseapp.com",
-//   projectId: "elite-ceremony-300706",
-//   storageBucket: "elite-ceremony-300706.appspot.com",
-//   messagingSenderId: "372364494410",
-//   appId: "1:372364494410:web:67e4e1e2c41522683a08b3",
-//   measurementId: "G-9ESRF246F1"
-// };
-
-// import { initializeApp } from 'firebase/app';
-// import { getMessaging } from 'firebase/messaging/sw';
-
-// const firebaseApp = initializeApp(firebaseApps);
-// getMessaging(firebaseApp);
-// console.info('Firebase messaging service worker is set up');
-
-
 import firebase from 'firebase/app'
 import 'firebase/firebase-messaging'
 
@@ -60,5 +42,5 @@ messaging.onMessage(function(payload) {
       notification.close();
       console.log(event);
     };
-   });
+});
 }

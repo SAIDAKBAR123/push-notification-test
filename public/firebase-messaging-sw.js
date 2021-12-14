@@ -1,6 +1,4 @@
 /* eslint-disable no-undef */
-
-
 importScripts('https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js');
 importScripts('https://www.gstatic.com/firebasejs/8.4.3/firebase-messaging.js');
 var firebaseConfig = {
@@ -16,7 +14,7 @@ firebase.initializeApp(firebaseConfig)
 firebase.messaging()
 const messaging  = firebase.messaging()
 messaging.onBackgroundMessage((e) => {
-    console.log("tesing sevice worker", e)
+    console.log("testing sevice worker", e)
     // Customize notification here
     const notificationTitle = 'vue-cometchat-firebase';
     const notificationOptions = {
