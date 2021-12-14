@@ -1,5 +1,5 @@
 <template>
-  <div>hello</div>
+  <div>Saidakbar push notification</div>
 </template>
 
 <script>

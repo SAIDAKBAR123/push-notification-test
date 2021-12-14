@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="https://www.trendrr.net/wp-content/uploads/2017/06/Emma-Watson-Top-Most-Famous-Beautiful-Hollywood-Actresses-2018.jpg">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
     <button type="button" @click="sune" style="padding: 10px; background: blueLight; border-radius: 10px; box-shadow: none">PUSH NOTIFICATION !</button>
   </div>
@@ -16,11 +15,11 @@ export default {
   },
   methods: {
     sune () {
-      // alert('sdfsfsdcds')
       console.log(Notification.permission)
        if (Notification.permission === 'granted') {
         const notification = new Notification('This is granded message from API', {
           body: 'This is just plain text',
+          image: 'https://media-exp1.licdn.com/dms/image/C560BAQHdVfLI4WpPIw/company-logo_200_200/0/1588864747982?e=2159024400&v=beta&t=ptcROrYhP3Gl735dOED7sMKbUA701y2kLlOgY7nZM6Y',
           icon: "https://images.unsplash.com/photo-1633114128814-11fac33f707b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=1000&q=60"
         });
 

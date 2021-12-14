@@ -1,12 +1,8 @@
+/* eslint-disable no-unused-vars */
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import {  onMessage , getMessaging, getToken } from "firebase/messaging";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-
-const firebaseConfig = {
+const firebaseApp = {
   apiKey: "AIzaSyCx5Hw53Af-_uVHhMdv9D4tEeAGzSbuSMg",
   authDomain: "elite-ceremony-300706.firebaseapp.com",
   projectId: "elite-ceremony-300706",
@@ -16,7 +12,5 @@ const firebaseConfig = {
   measurementId: "G-9ESRF246F1"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-// eslint-disable-next-line no-unused-vars
-const analytics = getAnalytics(app);
+// const app = initializeApp(firebaseApp);
+const messaging = getMessaging(firebaseApp);
