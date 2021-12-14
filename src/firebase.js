@@ -31,11 +31,10 @@ firebase.initializeApp(firebaseConfig)
 messaging.onMessage(function(payload) {
     console.log('Receiving foreground message');
     console.log(payload)
-      var notificationTitle = 'vue-cometchat-firebase';
-    var notificationOptions = {
-      body: payload.data.message,
-      icon: '',
-    };
+      const notificationTitle = payload.data.username;
+      const notificationOptions = {
+        body: payload.data.message,
+      };
 
     var notification = new Notification(notificationTitle, notificationOptions);
     notification.onclick = function(event) {
