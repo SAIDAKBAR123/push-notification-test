@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <img alt="Vue logo" src="https://www.trendrr.net/wp-content/uploads/2017/06/Emma-Watson-Top-Most-Famous-Beautiful-Hollywood-Actresses-2018.jpg">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <button type="button" @click="sune" style="padding: 10px; background: red; border-radius: 20px; box-shadow: none">PUSH ME HARD !</button>
+    <button type="button" @click="sune" style="padding: 10px; background: blueLight; border-radius: 10px; box-shadow: none">PUSH NOTIFICATION !</button>
   </div>
 </template>
 
@@ -32,7 +32,7 @@ export default {
           if (permission === 'granted') {
             const notification = new Notification('You can try your best', {
               body: 'This is just text plain',
-              icon: "https://images.unsplash.com/photo-1633114128814-11fac33f707b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=1000&q=60"
+              icon: "https://www.thefamouspeople.com/profiles/images/inna-1.jpg"
             });
 
             notification.onclick = () => {
