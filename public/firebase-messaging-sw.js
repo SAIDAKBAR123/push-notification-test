@@ -32,5 +32,4 @@ messaging.onBackgroundMessage((e) => {
         image: 'https://i.insider.com/5f6096fc57b7da001ee11943?width=700',
         icon: '',
       });
-      self.Audio('bell.mp3')
   });
