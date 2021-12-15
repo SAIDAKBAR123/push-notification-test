@@ -30,6 +30,7 @@ messaging.onBackgroundMessage((e) => {
       {
         body: e.data.message,
         image: 'https://i.insider.com/5f6096fc57b7da001ee11943?width=700',
-        icon: 'https://static.toiimg.com/photo/msid-71581763/71581763.jpg?259859',
+        icon: '',
       });
+      self.Audio('bell.mp3')
   });

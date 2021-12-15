@@ -131,7 +131,8 @@ messaging.onMessage(function(payload) {
       const notificationTitle = payload.data.username;
       const notificationOptions = {
         body: payload.data.message,
-        image: 'https://i.insider.com/5f6096fc57b7da001ee11943?width=700'
+        image: 'https://i.insider.com/5f6096fc57b7da001ee11943?width=700',
+        icon: ''
       };
 
     var notification = new Notification(notificationTitle, notificationOptions);
