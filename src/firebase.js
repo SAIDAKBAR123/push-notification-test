@@ -89,7 +89,7 @@ import firebase from 'firebase/app'
 import 'firebase/firebase-messaging'
 
 
-export default async function firebaseInitialize (shipper_id = 'd4b1658f-3271-4973-8591-98a82939a664'){
+export default async function firebaseInitialize (shipper_id = 'd4b1658f-3271-4973-8591-98a82939a664', t){
 
 console.log(shipper_id)  // firebase credentials
   const firebaseConfig = {
@@ -112,6 +112,8 @@ firebase.initializeApp(firebaseConfig)
  messaging.getToken({ vapidKey: 'BBquQQmEpLBfdqpyYUtxbTYRi2BhvXv3RElkngZGoWpZTjBhpijKJqPt5TPumD-eKwWkIt2JDs2LAIvHhm8u8do' }).then((currentToken) => {
   if (currentToken) {
     console.log(currentToken)
+    t.notify = currentToken
+
     // subscribeTokenToTopic(currentToken, shipper_id);
 
   } else {

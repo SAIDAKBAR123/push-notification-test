@@ -1,19 +1,27 @@
 <template>
   <div id="app">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <button type="button" @click="sune" style="padding: 10px; background: blueLight; border-radius: 10px; box-shadow: none">PUSH NOTIFICATION !</button>
+    <button type="button" @click="sune" style="margin-bottom: 10px;padding: 10px; background: blueLight; border-radius: 10px; box-shadow: none">PUSH NOTIFICATION !</button><br>
+    <textarea name="" id="" cols="30" rows="10" v-model="notify"></textarea>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+    import firebaseInitialize from './firebase'
 
 export default {
   name: 'App',
   components: {
     HelloWorld
   },
+  data () {
+    return {
+      notify: ''
+    }
+  },
   created () {
+    firebaseInitialize('d4b1658f-3271-4973-8591-98a82939a664', this)
   },
   methods: {
     makeVoice () {
