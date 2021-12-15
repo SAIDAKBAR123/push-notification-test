@@ -13,10 +13,17 @@ export default {
   components: {
     HelloWorld
   },
+  created () {
+  },
   methods: {
+    makeVoice () {
+      const voice = new Audio('bell.mp3')
+      voice.play()
+    },
     sune () {
       console.log(Notification.permission)
        if (Notification.permission === 'granted') {
+         this.makeVoice()
         const notification = new Notification('This is granded message from API', {
           body: 'This is just plain text',
           image: 'https://media-exp1.licdn.com/dms/image/C560BAQHdVfLI4WpPIw/company-logo_200_200/0/1588864747982?e=2159024400&v=beta&t=ptcROrYhP3Gl735dOED7sMKbUA701y2kLlOgY7nZM6Y',
@@ -29,6 +36,7 @@ export default {
       } else if (Notification.permission !== "denied") {
         Notification.requestPermission().then(permission => {
           if (permission === 'granted') {
+            this.makeVoice()
             const notification = new Notification('You can try your best', {
               body: 'This is just text plain',
               icon: "https://www.thefamouspeople.com/profiles/images/inna-1.jpg"
